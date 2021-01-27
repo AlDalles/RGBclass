@@ -5,7 +5,7 @@ private $Red;
 private $Green;
 Private $Blue;
 
-private function __construct ($Red, $Green, $Blue){
+public function __construct ($Red, $Green, $Blue){
     $this->Red = $this->SetRed($Red);
     $this->Green = $this->SetGreen($Green);
     $this->Blue = $this->SetRed($Blue);
@@ -58,6 +58,8 @@ else  throw new InvalidArgumentException('This  method only accepts integers fro
 
 
 }
+
+$Color = new RGBcolor(220,19,74);
 
 
 
