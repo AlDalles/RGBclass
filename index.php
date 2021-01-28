@@ -1,123 +1,70 @@
-<?php
-class RGBcolor
-{
-private $Red;
-private $Green;
-Private $Blue;
-
-public function __construct ($Red, $Green, $Blue){
-    $this->SetRed($Red);
-    $this->SetGreen($Green);
-    $this->SetBlue($Blue);
-
-}
-public function GetColor()
-{
-    return "$this->Red"."."."$this->Green"."."."$this->Blue";
-}
-
-public function GetRed()
-{
-    return $this->Red;
-}
-
-    public function GetGreen()
-    {
-        return $this->Green;
-    }
-
-    public function GetBlue()
-    {
-        return $this->Blue;
-    }
-
-
-    private function SetRed($Red){
-    if (is_int($Red)){
-    if ($Red>=0  & $Red<=255 )
-
-    {
-
-           $this->Red = $Red;
-
-
-        }
-    else  throw new InvalidArgumentException('This  method only accepts integers. Input was: '.$Red);
-    }
-else  throw new InvalidArgumentException('This  method only accepts integers from 0 to 255. Input was: '.$Red);
-
-}
-
-private function SetGreen($Green){
-    if (is_int($Green)){
-    if ($Green>=0 & $Green<=255 )
-
-    {
-           $this->Green=$Green;
-
-        }
-    else  throw new InvalidArgumentException('This  method only accepts integers. Input was: '.$Green);
-    }
-else  throw new InvalidArgumentException('This  method only accepts integers from 0 to 255. Input was: '.$Green);
-
-}
-
-    private function SetBlue($Blue){
-        if (is_int($Blue)){
-            if ($Blue>=0 &$Blue<=255 )
-
-            {
-                $this->Blue=$Blue;
-
-            }
-            else  throw new InvalidArgumentException('This  method only accepts integers. Input was: '.$Blue);
-        }
-        else  throw new InvalidArgumentException('This  method only accepts integers from 0 to 255. Input was: '.$Blue);
-
-    }
-
-
-    public function Mixer(RGBcolor $color)
-    {
-        if ($this->Red+$color->Red>255 || $this->Green+$color->Green>255|| $this->Blue+$color->Blue>255){
-            throw new InvalidArgumentException(" You can't  get sum of this object because one or more of them more of permissible values ");
-        }
-
-    return new RGBcolor($this->Red+$color->Red, $this->Green+$color->Green,$this->Blue+$color->Blue);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layot</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body bgcolor=rgb(<?php include 'RGBclass.php'; ?>)>
 
 
 
-    }
+    <ul class="menu">
+        <li class="menu-iteam">
+            <a href="#" class="menu-link">
+                UM
+            </a>
+        </li>
+        <li class="menu-iteam">
+            <a href="#" class="menu-link">
+                Author
+            </a>
+        </li>
+        <li class="menu-iteam">
+            <a href="#" class="menu-link">
+                Album
+            </a>
+        </li>
+        <li class="menu-iteam">
+            <a href="#" class="menu-link">
+                Technology
+            </a>
+        </li>
+    </ul>
 
-public function Equals(RGBcolor $color)
-{
-    if ($this->Red == $color->Red & $this->Green == $color->Green & $this->Blue == $color->Blue) {
-        return true;
-    } else {
-        return folse;}
-}
-public static function RandomColor(){
-return new RGBcolor(random_int(0,255),random_int(0,255),random_int(0,255));
+    <h1 class="caption">
+        Ночная смена
+    </h1>
 
+    <div class="text">
+        <p class="text-iteam">
+            Холл с наслаждением затягивался сигаретой, развалившись на  небольшой 
+            скамье недалеко от элеватора.  Скамья  эта  была  единственным  местом  на 
+            третьем этаже, где можно было спокойно перекурить и ненадолго отвлечься от 
+            работы, не опасаясь появления начальства. 
+        </p>
+        <p class="text-iteam">
 
-}
-}
+        </p>
+        <p class="text-iteam">
+            Именно в этот момент и  появился зловредный  Уорвик.  Холл  совершенно  
+            не  ожидал  увидеть шефа и был, естественно, совсем не рад  этой  неожиданной  
+            встрече,  рассчитывая, что Уорвик может появиться там никак не раньше трех. 
+            Да и вообще,  он редко показывался на рабочих местах во время ночной 
+            смены. Особенно на третьем этаже. В это время он предпочитал, обычно, 
+            отсиживаться
 
-
-
-
-$Color = new RGBcolor(220,15,44);
-
-echo $Color->GetColor();
-echo "<br>";
-
-var_dump($Color);
-$color_Rand=RGBcolor::RandomColor();
-var_dump($color_Rand);
-
-
-
-
-
-?>
-
+            <span class="text-item">
+                в  своем офисе попивать кофе из своего любимого электрического кофейника, 
+                который стоял у него прямо на рабочем столе. Кроме того, в последнее время 
+                стояла  ужасная жара и, в связи с этим, выше первого этажа Уорвик обычно не 
+                поднимался.
+            </span>
+        </p>
+    </div>
+    
+    <footer class="running-title">
+        &copy 2003-2008 UlinMusi
+    </footer>
+</body>
+</html>

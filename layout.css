@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url(https://fonts.googleapis.com/css?family=Libre+Franklin);
+}
+body {
+   /* background:rgb(255, 2, 255); /*color body*/
+}
+.menu {
+    list-style: none;
+    margin-top: 100px;
+}
+.menu-iteam {
+    display: inline;
+    font-size: 15px;
+    font-family: 'Libre Franklin', sans-serif;
+    opacity: 0.87;
+    line-height: 20px;
+    padding: 0 15px 0 0;
+}
+.menu-link {
+    text-decoration: none;
+    color: rgb(177, 187, 203);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.65);
+}
+.caption {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.65);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 71px 0 0 95px;
+}
+.text {
+    width: 467px;
+    font-family: 'Libre Franklin', sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0 0 0 95px;
+    font-size: 13px;
+}
+.text-item {
+    display: block;
+}
+.running-title {
+    margin-top: 155px;
+    margin-left: 54px;
+    color: rgb(255, 255, 255);
+    opacity: 0.27;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 9px;
+}
