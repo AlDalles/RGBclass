@@ -6,9 +6,9 @@ private $Green;
 Private $Blue;
 
 public function __construct ($Red, $Green, $Blue){
-    $this->Red = $this->SetRed($Red);
-    $this->Green = $this->SetGreen($Green);
-    $this->Blue = $this->SetBlue($Blue);
+    $this->SetRed($Red);
+    $this->SetGreen($Green);
+    $this->SetBlue($Blue);
 
 }
 public function GetColor()
