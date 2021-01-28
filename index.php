@@ -16,10 +16,23 @@ public function GetColor()
     return "$this->Red"."."."$this->Green"."."."$this->Blue";
 }
 
+public function GetRed()
+{
+    return $this->Red;
+}
+
+    public function GetGreen()
+    {
+        return $this->Green;
+    }
+
+    public function GetBlue()
+    {
+        return $this->Blue;
+    }
 
 
-
-private function SetRed($Red){
+    private function SetRed($Red){
     if (is_int($Red)){
     if ($Red>=0  & $Red<=255 )
 
@@ -76,9 +89,22 @@ else  throw new InvalidArgumentException('This  method only accepts integers fro
 
     }
 
+public function Equals(RGBcolor $color)
+{
+    if ($this->Red == $color->Red & $this->Green == $color->Green & $this->Blue == $color->Blue) {
+        return true;
+    } else {
+        return folse;}
+}
+public static function RandomColor(){
+return new RGBcolor(random_int(0,255),random_int(0,255),random_int(0,255));
 
 
 }
+}
+
+
+
 
 $Color = new RGBcolor(220,15,44);
 
@@ -86,7 +112,8 @@ echo $Color->GetColor();
 echo "<br>";
 
 var_dump($Color);
-
+$color_Rand=RGBcolor::RandomColor();
+var_dump($color_Rand);
 
 
 
